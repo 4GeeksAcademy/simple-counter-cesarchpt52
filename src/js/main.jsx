@@ -11,20 +11,15 @@ import "../styles/index.css";
 // components
 import Home from "./components/Home";
 import SecondsCounter from "./components/SecondsCounter";
+import ControlledCounter from "./components/ControlledCounter";
 
-let counter = 510;
+let counter = 0;
 const raiz = ReactDOM.createRoot(document.getElementById("root"));
 const intervalo = setInterval(() => {
   counter++;
   raiz.render(
     <React.StrictMode>
-      <SecondsCounter seconds={counter} />
+      <ControlledCounter />
     </React.StrictMode>
   );
 }, 1000);
-
-raiz.render(
-  <React.StrictMode>
-    <SecondsCounter seconds={counter} />
-  </React.StrictMode>
-);

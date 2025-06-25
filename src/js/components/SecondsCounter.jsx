@@ -1,8 +1,9 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const DigitCounter = (props) => {
   return (
-    <div className="p-3 bg-black text-light border-dark rounded text-center">
+    <div className="p-3 bg-black text-light border-dark rounded text-center fw-bold">
       {props.tiempo}
     </div>
   );
@@ -11,10 +12,10 @@ const DigitCounter = (props) => {
 const SecondsCounter = (props) => {
   return (
     <div className="container d-flex bg-dark justify-content-center align-items-center gap-1 mt-3 ">
-      <div className="p-2 bg-black text-light border-dark rounded text-center">
-        <h2>
-          <i class="fa-regular fa-clock"></i>
-        </h2>
+      <div className="p-2 m-1 bg-black text-light border-dark rounded text-center">
+        <h3>
+          <i className="fa-regular fa-clock fw-bold"></i>
+        </h3>
       </div>
       <DigitCounter
         tiempo={Math.floor((props.seconds % 1000000) / 100000)}
